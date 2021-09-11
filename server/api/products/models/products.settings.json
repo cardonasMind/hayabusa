@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "products",
   "info": {
-    "name": "products"
+    "name": "products",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -17,10 +18,14 @@
       "required": true
     },
     "price": {
-      "type": "biginteger",
+      "type": "decimal",
+      "required": true,
       "unique": true,
-      "default": "0",
-      "required": true
+      "min": 0
+    },
+    "products_datum": {
+      "model": "products-data",
+      "via": "product"
     }
   }
 }

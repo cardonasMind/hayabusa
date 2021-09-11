@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products_data",
+  "info": {
+    "name": "products-data",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "secondhand": {
+      "type": "boolean",
+      "default": false,
+      "required": true,
+      "unique": false
+    },
+    "description": {
+      "type": "richtext",
+      "required": true,
+      "unique": true
+    },
+    "freeShipping": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "stock": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    },
+    "product": {
+      "via": "products_datum",
+      "model": "products"
+    }
+  }
+}

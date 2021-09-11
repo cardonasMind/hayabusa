@@ -6,7 +6,14 @@ interface CategoryProps {
     data: {
         id: string
         name: string
-        products: object[]
+        products: [
+            {
+                category: string,
+                id: string,
+                name: string,
+                price: number
+            }
+        ]
     }
 }
 

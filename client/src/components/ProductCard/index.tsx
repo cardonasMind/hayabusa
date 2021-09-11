@@ -5,7 +5,7 @@ interface ProductCardProps {
         category: string,
         id: string,
         name: string,
-        price: number,
+        price: number
     }
 }
 

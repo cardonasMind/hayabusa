@@ -2,10 +2,23 @@ import React from "react";
 
 import ProductCard from "../ProductCard";
 
-const PrintProducts = ({ products }) => (
-    <div>
-        {products.map(product => <ProductCard key={product.id} data={product} /> )}
-    </div>
-)
+interface PrintProductsProps {
+    products: [
+        {
+            category: string,
+            id: string,
+            name: string,
+            price: number,
+        }
+    ]
+}
+
+const PrintProducts = ({ products }: PrintProductsProps) => {
+    return (
+        <div>
+            {products.map(product => <ProductCard key={product.id} data={product} /> )}
+        </div>
+    )
+}
 
 export default PrintProducts;

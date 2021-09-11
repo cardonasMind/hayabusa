@@ -2,7 +2,15 @@ import React from "react";
 
 import PrintProducts from "./PrintProducts";
 
-const Category = ({ data }) => {
+interface CategoryProps {
+    data: {
+        id: string
+        name: string
+        products: object[]
+    }
+}
+
+const Category = ({ data }: CategoryProps) => {
     const { id, name, products } = data;
 
     return (

@@ -15,7 +15,7 @@ interface PrintProductsProps {
 
 const PrintProducts = ({ products }: PrintProductsProps) => {
     return (
-        <div>
+        <div className="grid grid-cols-5 grid-gap-5">
             {products.map(product => <ProductCard key={product.id} data={product} /> )}
         </div>
     )

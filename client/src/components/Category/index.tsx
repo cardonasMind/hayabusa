@@ -21,8 +21,8 @@ const Category = ({ data }: CategoryProps) => {
     const { id, name, products } = data;
 
     return (
-        <div className="bg-yellow-400">
-            <h1>{name} <a href={`/category/${id}`}>View all</a></h1>
+        <div className="mx-10 my-20">
+            <h1 className="text-2xl">{name} <a className="text-base text-blue-400 font-bold" href={`/category/${id}`}>View all</a></h1>
 
             <PrintProducts products={products} />
         </div>

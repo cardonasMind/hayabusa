@@ -23,9 +23,33 @@
       "unique": true,
       "min": 0
     },
-    "products_datum": {
-      "model": "products-data",
-      "via": "product"
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "freeShipping": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "stock": {
+      "type": "integer",
+      "min": 1
+    },
+    "secondhand": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
     }
   }
 }

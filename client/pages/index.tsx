@@ -34,10 +34,10 @@ class IndexPage extends PureComponent<IndexPageProps> {
         const { testCategoryData } = this.props;
 
         return (
-            <Fragment>
+            <body className="h-screen bg-gray-100">
                 <Header />
                 <Category data={testCategoryData} />
-            </Fragment>
+            </body>
         )
     }
 }
